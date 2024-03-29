@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+
+    <style>
+        body {
+            width: 440px; /* 원하는 가로 크기로 설정 */
+            margin: 0 auto; /* 페이지를 수평 가운데 정렬 */
+            background-color: rgb(148, 148, 148);
+            
+        }
+
+        .layer {
+            width: 100%; /* 가로 너비를 부모 요소인 body의 너비와 동일하게 설정 */
+            /* 다른 요소들의 스타일을 필요에 따라 설정합니다. */
+            height: 2400px;
+            background-color: white;
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style-type: none;
+        }
+        a{ color: black;}
+
+        .menu{
+            width: 100%;
+            height: 75px;
+            background-color: white;
+            border-bottom: 1.5px solid rgb(176, 176, 176);
+
+        }
+        .menubar{
+            padding-top: 5px;
+        }
+        .mwrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .svg {
+        display: flex;
+        justify-content: flex-end; /* 요소를 오른쪽으로 정렬합니다 */
+        padding-right: 4%;
+        }
+        .mbt a{display: none;}
+
+
+        .menulist{
+            display: none;position:
+            absolute;z-index:
+            2;width: 100%;
+            font-family: protendard, sans-serif;
+        }
+        .menulist li{
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0px;
+            border-top: 0.1px solid rgb(233, 233, 233);
+            text-align: center;
+            background-color: white;
+            color: black;
+            font-size: 1.em;
+            transition: background-color 0.3s ease;
+            
+        }
+        .menulist li:hover {
+            background-color: rgb(234, 234, 234);
+            color: rgb(134, 134, 134); 
+        }
+
+        .cbt{
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0px;
+        border-top: 0.1px solid rgb(233, 233, 233);
+        text-align: center;
+        background-color: white;
+        color: black;
+        font-size: 1.em;
+        }   
+
+        .logo{
+            padding: 20px;
+        }
+        .circle {
+        background-color: rgb(180, 180, 180);
+        width: 35px; /* 회색 원 도형의 너비 설정 */
+        height: 35px; /* 회색 원 도형의 높이 설정 */
+        border-radius: 50%; /* 원 모양의 모서리를 설정 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .layer{
+            background-color: antiquewhite;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+    
+        <div class="mwrap">
+            <div class="logo"><a href="index.html"><img src="img/main/logo.png"></a></div>
+            <div class="svg">
+                <div class="circle">
+                    <div class="menubar" id="open"><img src="img/main/menu.svg" alt=""></div>
+                </div>
+            </div>
+            
+        </div>
+        <ul class="menulist" id="menubox">
+            <li><a href="">main</a></li>
+            <li><a href="">friends</a></li>
+            <li><a href="">profile</a></li>
+            <div class="cbt" id="close">Menu Close</div>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('open').addEventListener('click', function () {
+            document.getElementById('menubox').style.width = '440px';
+            document.getElementById('menubox').style.display = 'block';
+        });
+        document.getElementById('close').addEventListener('click', function () {
+            document.getElementById('menubox').style.display = 'none';
+        });
+    </script>
+
+    <div class="layer">
+        <!-- Main content goes here -->
+    </div>
+</body>
+</html>
